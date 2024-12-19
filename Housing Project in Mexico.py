@@ -1,0 +1,104 @@
+""" This is my online course in Worldquant University that is all about Data Science"""
+# Project 01: Housing Project in Mexico
+
+# Declare variable `house_0_list`
+house_0_list = [115910.26, 128, 4]
+
+# Print object type of `house_0_list`
+# (We'll learn more about object types in later projects 😉)
+print("house_0_list type:", type(house_0_list))
+
+# Print length of `house_0_list`
+print("house_0_list length:", len(house_0_list))
+
+# Get output of `house_0_list`
+house_0_list
+
+# Task 1.1.1: One metric that people in the real estate industry look at 
+# is price per square meter because it allows them to compare houses of different sizes. 
+# Can you use the information in this list to calculate the price per square meter for house_0?
+
+house_0_price_m2 = house_0_list[0]/house_0_list[1]
+print(house_0_price_m2)
+
+#Task 1.1.2: Next, use the append method to add the price per square meter to the end of the end of house_0.
+house_0_list.append(house_0_price_m2)
+print(house_0_list)
+
+# Nested List
+# Declare variable `houses_nested_list`
+houses_nested_list = [
+    [115910.26, 128.0, 4.0],
+    [48718.17, 210.0, 3.0],
+    [28977.56, 58.0, 2.0],
+    [36932.27, 79.0, 3.0],
+    [83903.51, 111.0, 3.0],
+]
+
+# Print `houses_nested_list` type
+print("houses_nested_list type:", type(houses_nested_list))
+
+# Print `houses_nested_list` length
+print("houses_nested_list length:", len(houses_nested_list))
+
+# Get output of `houses_nested_list`
+houses_nested_list
+
+#**Task 1.1.3:** Append the price per square meter to each 
+# observation in `houses_nested_list` using a `for` loop.
+
+for house in houses_nested_list:
+    price_m2 = house[0]/house[1]
+    house.append(price_m2)
+print(houses_nested_list)
+
+# Dictionary
+# Declare variable `house_0_dict`
+house_0_dict = {
+    "price_approx_usd": 115910.26,
+    "surface_covered_in_m2": 128,
+    "rooms": 4,
+}
+
+#Task 1.1.4: Calculate the price per square meter for 
+# house_0 and add it to the dictionary under the key "price_per_m2".
+
+house_0_dict["price_per_m2"]=house_0_dict["price_approx_usd"]/house_0_dict["surface_covered_in_m2"]
+print(house_0_dict)
+
+#JSON
+# Declare variable `houses_rowwise`
+houses_rowwise = [
+    {
+        "price_approx_usd": 115910.26,
+        "surface_covered_in_m2": 128,
+        "rooms": 4,
+    },
+    {
+        "price_approx_usd": 48718.17,
+        "surface_covered_in_m2": 210,
+        "rooms": 3,
+    },
+    {
+        "price_approx_usd": 28977.56,
+        "surface_covered_in_m2": 58,
+        "rooms": 2,
+    },
+    {
+        "price_approx_usd": 36932.27,
+        "surface_covered_in_m2": 79,
+        "rooms": 3,
+    },
+    {
+        "price_approx_usd": 83903.51,
+        "surface_covered_in_m2": 111,
+        "rooms": 3,
+    },
+]
+
+#Task 1.1.5: Using a for loop, calculate the price per square meter and store the result under a 
+# "price_per_m2" key for each observation in houses_rowwise.
+
+for house in houses_rowwise:
+    house["price_per_m2"]=house["price_approx_usd"]/house["surface_covered_in_m2"]
+    print(house)
