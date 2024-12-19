@@ -141,3 +141,18 @@ print(houses_columnwise)
 # Calculate `mean_house_price` using `houses_columnwise`
 mean_house_price = sum(houses_columnwise["price_approx_usd"]) / len(houses_columnwise["price_approx_usd"])
 print(mean_house_price)
+
+#Task 1.1.8: Create a "price_per_m2" column in houses_columnwise?
+
+# Add "price_per_m2" key-value pair for `houses_columnwise`
+houses_columnwise["price_per_m2"] = [price/surface for price, surface in zip(houses_columnwise["price_approx_usd"], houses_columnwise["surface_covered_in_m2"])]
+print(houses_columnwise)
+
+# Import pandas library, aliased as `pd`
+import pandas as pd
+
+# Declare variable `df_houses`
+df_houses = pd.DataFrame(houses_columnwise)
+
+# Get output of `df_houses`
+print(df_houses)
