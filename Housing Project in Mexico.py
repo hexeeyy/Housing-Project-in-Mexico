@@ -138,3 +138,6 @@ print("houses_columnwise type:", type(houses_columnwise))
 print(houses_columnwise)
 
 #Task 1.1.7: Calculate the mean house price in houses_columnwise
+# Calculate `mean_house_price` using `houses_columnwise`
+mean_house_price = sum(houses_columnwise["price_approx_usd"]) / len(houses_columnwise["price_approx_usd"])
+print(mean_house_price)
