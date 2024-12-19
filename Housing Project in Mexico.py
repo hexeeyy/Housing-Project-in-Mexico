@@ -102,3 +102,39 @@ houses_rowwise = [
 for house in houses_rowwise:
     house["price_per_m2"]=house["price_approx_usd"]/house["surface_covered_in_m2"]
     print(house)
+
+#Task 1.1.6: To calculate the mean price for houses_rowwise by 
+# completing the code below.
+# Declare `house_prices` as empty list
+house_prices = []
+
+# Iterate through `houses_rowwise`
+for house in houses_rowwise:
+    house_prices.append(house["price_approx_usd"])
+
+    # For each house, append "price_approx_usd" to `house_prices`
+
+
+# Calculate `mean_house_price` using `house_prices`
+mean_house_price = sum(house_prices) / len(house_prices)
+
+# Print `mean_house_price` object type
+print("mean_house_price type:", type(mean_house_price))
+
+# Get output of `mean_house_price`
+print(mean_house_price)
+
+# Declare variable `houses_columnwise`
+houses_columnwise = {
+    "price_approx_usd": [115910.26, 48718.17, 28977.56, 36932.27, 83903.51],
+    "surface_covered_in_m2": [128.0, 210.0, 58.0, 79.0, 111.0],
+    "rooms": [4.0, 3.0, 2.0, 3.0, 3.0],
+}
+
+# Print `houses_columnwise` object type
+print("houses_columnwise type:", type(houses_columnwise))
+
+# Get output of `houses_columnwise`
+print(houses_columnwise)
+
+#Task 1.1.7: Calculate the mean house price in houses_columnwise
