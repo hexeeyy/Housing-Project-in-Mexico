@@ -23,4 +23,19 @@ print("df3 shape:", df3.shape)"""
 # Get output of df1 head
 #df1.head(10)
 
+#Task 1.2.3: Clean df1 by dropping rows with NaN values. Then remove the "$" and "," characters from "price_usd" and recast the values in the column as floats.
+# Drop null values from df1
+"""df1.dropna(inplace=True)
+# Clean "price_usd" column in df1
+df1["price_usd"] = (
+    df1["price_usd"]
+    .str.replace("$", "", regex=False)
+    .str.replace(",", "")
+    .astype(float)
+)
 
+# Print object type, shape, and head
+print("df1 type:", type(df1))
+print("df1 shape:", df1.shape)
+df1.head()
+"""
