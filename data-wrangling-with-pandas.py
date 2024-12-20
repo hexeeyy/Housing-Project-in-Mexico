@@ -14,3 +14,13 @@ print("df2 shape:", df2.shape)
 print()
 print("df3 type:", type(df3))
 print("df3 shape:", df3.shape)"""
+
+#Task 1.2.2: Inspect df1 by looking at its shape attribute. Then use the info method to see the data types and number of missing values for each column. Finally, use the head method to determine to look at the first five rows of your dataset.
+# Print df1 shape
+#df1.shape
+# Print df1 info
+#df1.info()
+# Get output of df1 head
+#df1.head(10)
+
+
