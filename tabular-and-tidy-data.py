@@ -12,7 +12,7 @@ print("house_0_list type:", type(house_0_list))
 print("house_0_list length:", len(house_0_list))
 
 # Get output of `house_0_list`
-house_0_list
+print(house_0_list)
 
 # Task 1.1.1: One metric that people in the real estate industry look at 
 # is price per square meter because it allows them to compare houses of different sizes. 
@@ -42,7 +42,7 @@ print("houses_nested_list type:", type(houses_nested_list))
 print("houses_nested_list length:", len(houses_nested_list))
 
 # Get output of `houses_nested_list`
-houses_nested_list
+print(houses_nested_list)
 
 #**Task 1.1.3:** Append the price per square meter to each 
 # observation in `houses_nested_list` using a `for` loop.
