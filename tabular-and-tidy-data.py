@@ -157,10 +157,35 @@ df_houses = pd.DataFrame(houses_columnwise)
 # Get output of `df_houses`
 print(df_houses)
 
-
+#my own practice
+#Create a dictionary
 new_data = {
     "key": [203, 20, 223, 1212],
     "feature2": ["Codes", "Age", "Achievements", "Work"]
 }
+print("\nData", new_data, type(new_data))
 
-print(list(zip(new_data["feature2"], new_data["key"] )))
+datax = (list(zip(new_data["feature2"], new_data["key"] )))
+print("\nThis is the datax: ", datax, type(datax))
+
+#Declare a new variable and add it to the datax
+Add = {
+    "Math": 54,
+    "Science": 32
+}
+print("\nThis is the New Data: ", Add, type(Add))
+
+# From the Add dictionary, separate the key and the value.
+add_items = list(Add.items())
+print("\nThis is the add_items: ", add_items, type(add_items))
+
+# Extend datax with add_items
+datax.extend(add_items)
+print("\nThis is the extended datax: ", datax, type(datax))
+
+df_new_data = pd.DataFrame(datax, columns=['Feature', 'Grade'], index=[chr(97 + i) for i in range(len(datax))])
+print(df_new_data)
+
+
+
+
