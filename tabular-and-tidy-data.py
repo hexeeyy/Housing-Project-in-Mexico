@@ -183,9 +183,9 @@ print("\nThis is the add_items: ", add_items, type(add_items))
 datax.extend(add_items)
 print("\nThis is the extended datax: ", datax, type(datax))
 
-df_new_data = pd.DataFrame(datax, columns=['Feature', 'Grade'], index=[chr(97 + i) for i in range(len(datax))])
+df_new_data = pd.DataFrame(datax, columns=['Feature', 'Grade'], 
+                           index=[chr(97 + i) for i in range(len(datax))])
 print(df_new_data)
-
 
 
 
