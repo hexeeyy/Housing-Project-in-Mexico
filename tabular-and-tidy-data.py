@@ -156,3 +156,11 @@ df_houses = pd.DataFrame(houses_columnwise)
 
 # Get output of `df_houses`
 print(df_houses)
+
+
+new_data = {
+    "key": [203, 20, 223, 1212],
+    "feature2": ["Codes", "Age", "Achievements", "Work"]
+}
+
+print(list(zip(new_data["feature2"], new_data["key"] )))
